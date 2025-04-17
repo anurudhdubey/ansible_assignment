@@ -5,3 +5,4 @@
      ansible.builtin.lineinfile:
         path: /temp/appconfig
         line: "contact: admin@myorg.com"
+        create: yes

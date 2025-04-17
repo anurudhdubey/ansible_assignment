@@ -16,5 +16,6 @@
         
     - name: update details to /mnt/details
       copy: 
-       content: "{{ ansible_facts.os_family }}#{{ ansible_default_ipv4.address}}#{{ inventory_hostname}}#{{ansible_distribution}}"
+       content: 
+                "{{ ansible_facts.os_family }}#{{ ansible_default_ipv4.address}}#{{ inventory_hostname}}#{{ansible_distribution}}"   
        dest: /mnt/osdetails
