@@ -1,0 +1,7 @@
+- name: Useinfile module
+  hosts: all
+  tasks:
+   - name: check infile module
+     ansible.builtin.lineinfile:
+        path: /temp/appconfig
+        line: "contact: admin@myorg.com"

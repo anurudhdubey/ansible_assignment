@@ -1,0 +1,11 @@
+
+ - name: fetch 
+   hosts: all
+   tasks:
+    - name: fetch
+      ansible.builtin.fetch:
+       src: /etc/resolv.conf
+       dest: /tmp/resolv.conf
+
+
+     

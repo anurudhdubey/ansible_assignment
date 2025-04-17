@@ -1,0 +1,22 @@
+---
+- name: Install and configure httpd on all nodes
+  hosts: all
+  become: true
+
+  tasks:
+
+    - name: Install httpd package
+      yum:
+        name: httpd
+        state: present
+
+    - name: Copy default.html to managed nodes
+      copy:
+        src: default.html
+        dest: /var/www/html/default.html
+
+    - name: Enable and start httpd service
+      service:
+        name: httpd
+        state: started
+        enabled: true

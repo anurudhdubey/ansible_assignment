@@ -1,0 +1,6 @@
+- name: using custom created role
+  hosts: all
+  vars:
+    pkg: nginx
+  roles:
+    - webroles

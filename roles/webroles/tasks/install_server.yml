@@ -1,0 +1,9 @@
+- name: install pkg
+  hosts: all
+  task:
+      dnf: 
+        name: "{{ pkg }}"
+        state: latest
+
+        
+
