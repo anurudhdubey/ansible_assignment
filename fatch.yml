@@ -5,7 +5,7 @@
     - name: fetch
       ansible.builtin.fetch:
        src: /etc/resolv.conf
-       dest: /tmp/resolv.conf
+       dest: /home/student/ansible/tmp/resolv.conf
 
 
      
